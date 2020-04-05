@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demouser.languageapp.VocabPractice">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/exWord"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:textSize="64sp" />
+
+        <TextView
+            android:id="@+id/gameStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="Please select an answer"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/choice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/choice2"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="46dp"
+                android:background="@android:color/holo_blue_light"
+                android:onClick = "onChoice1"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/choice2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/holo_blue_light"
+                android:onClick = "onChoice2"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/choice3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/choice2"
+                android:layout_marginTop="39dp"
+                android:background="@android:color/holo_blue_light"
+                android:onClick = "onChoice3"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/choice3"
+                android:onClick="onStart"
+                android:text="New Word"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
